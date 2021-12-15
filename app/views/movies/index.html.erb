@@ -24,9 +24,9 @@
         <td><%= movie.directors %></td>
         <td><%= movie.actors %></td>
         <td><%= movie.category %></td>
-        <td><%= link_to 'Show', movie %></td>
-        <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
-        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', movie, class:"btn btn-success" %></td>
+        <td><%= link_to 'Edit', edit_movie_path(movie), class:"btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info" %></td>
       </tr>
     <% end %>
   </tbody>
