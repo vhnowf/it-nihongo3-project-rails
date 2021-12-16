@@ -35,6 +35,27 @@
     <%= image_tag @movie.image %>
   <% end %>
 </p>
+
+<p>Review From</p>
+  <%= form_with(model: @movie_review, local: true) do |form| %>
+    <div class= "field">
+      <%= form.text_area :review %>
+      <%= form.hidden_field :movie_id, :value => @movie.id %>
+    </div>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+  
+  <p>Review List</p>
+   <ul>
+     <% @movie.movie_review.each do |movie_review|%>
+       <li><%= movie_review.review %>
+       (<i><%= movie_review.user_id if movie_review.user_id%></i>)</li>
+     <% end %>
+   </ul>
+
+
   
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
 <%= link_to 'Back', movies_path %>

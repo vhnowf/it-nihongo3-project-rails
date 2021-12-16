@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :movie_reviews
   devise_for :users
   root 'static_pages#home'
   resources :movies
