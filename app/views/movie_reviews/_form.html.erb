@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field mb-3">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
+    <%= form.label :user_id,"ユーザーのID", class:"form-label"%>
+    <%= form.number_field :user_id, class:"form-control" %>
   </div>
 
   <div class="field mb-3">
-    <%= form.label :movie_id %>
-    <%= form.number_field :movie_id %>
+    <%= form.label :movie_id, "映画のID", class:"form-label"%>
+    <%= form.number_field :movie_id, class:"form-control" %>
   </div>
 
   <div class="field mb-3">
-    <%= form.label :review %>
-    <%= form.text_area :review %>
+    <%= form.label :review, "レビュー", class:"form-label"%>
+    <%= form.text_area :review, class:"form-control" %>
   </div>
 
   <div class="actions">

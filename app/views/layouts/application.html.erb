@@ -17,8 +17,9 @@
   <body>
     <%= render 'static_pages/header' %>
     <div class = "container">
+        <br>
         <% if user_signed_in? %>
-        <p>こんにちわ, <%= link_to current_user.name , users_show_path, method: :get %></p>
+        <p style="color:green">こんにちは, <%= link_to current_user.name , users_show_path, method: :get %></p>
         <% end %>
         <hr>
         <%= yield %>

@@ -11,20 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="field mb-3">
+    <%= form.label :name,"名前", class:"form-label" %>
+    <%= form.text_field :name, class:"form-control" %>
+  </div>
+  
+  <div class="field mb-3">
+    <%= form.label :age, "年齢", class:"form-label" %>
+    <%= form.number_field :age, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+  <div class="field mb-3">
+    <%= form.label :description,"インフォメーション", class:"form-label" %>
+    <%= form.text_area :description, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :age %>
-    <%= form.number_field :age %>
-  </div>
   <div class="field mb-3">
       <%= form.label :image, class:"form-label" %>
       <%= form.file_field :image, class:"form-control" %><br>

@@ -1,32 +1,32 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>タイトル:</strong>
   <%= @movie.title %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>インフォメーション:</strong>
   <%= @movie.description %>
 </p>
 
 <p>
-  <strong>Length:</strong>
-  <%= @movie.length %> minutes
+  <strong>長さ:</strong>
+  <%= @movie.length %> 分
 </p>
 
 <p>
-  <strong>Directors:</strong>
+  <strong>ディレクター:</strong>
   <%= @movie.directors %>
 </p>
 
 <p>
-  <strong>Actors:</strong>
+  <strong>アクター:</strong>
   <%= @movie.actors %>
 </p>
 
 <p>
-  <strong>Category:</strong>
+  <strong>カテゴリー:</strong>
   <%= @movie.category %>
 </p>
 
@@ -36,7 +36,7 @@
   <% end %>
 </p>
 
-<p>Review Form</p>
+<p>レビュー</p>
   <%= form_with(model: @movie_review, local: true) do |form| %>
     <div class= "field">
       <%= form.text_area :review %>
@@ -49,7 +49,7 @@
   <% end %>
   <br>
   
-  <p>Review List</p>
+  <p>レビュー リスト</p>
    <ul>
      <% @movie.movie_review.each do |movie_review|%>
        <li><%= movie_review.review %>
