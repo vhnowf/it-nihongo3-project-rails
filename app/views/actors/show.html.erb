@@ -1,19 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>名前:</strong>
   <%= @actor.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @actor.description %>
+  <strong>年齢:</strong>
+  <%= @actor.age %>
 </p>
 
 <p>
-  <strong>Age:</strong>
-  <%= @actor.age %>
+  <strong>インフォメーション:</strong>
+  <%= @actor.description %>
 </p>
+
 <p>
   <% if @actor.image.attached? %>
     <%= image_tag @actor.image %>

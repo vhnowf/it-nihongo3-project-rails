@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Actors</h1>
+<h1>アクター</h1>
 
-<table>
+<table class="table table-striped table-hover">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Age</th>
+      <th>名前</th>
+      <th>年齢</th>
+      <th>インフォメーション</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,9 +18,9 @@
         <td><%= actor.name %></td>
         <td><%= actor.description %></td>
         <td><%= actor.age %></td>
-        <td><%= link_to 'Show', actor %></td>
-        <td><%= link_to 'Edit', edit_actor_path(actor) %></td>
-        <td><%= link_to 'Destroy', actor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '見せる', actor, class:"btn btn-success",　method: :get %></td>
+        <td><%= link_to '修正', edit_actor_path(actor), class:"btn btn-warning", method: :get, class:"btn btn-warning" %></td>
+        <td><%= link_to '削除', actor, method: :delete, class: "btn btn-info", data: { confirm: 'Are you sure?' }, class: "btn btn-info" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Actor', new_actor_path %>
+<%= link_to '新しいアクターの追加', new_actor_path, method: :get, class:"btn btn-primary" %>

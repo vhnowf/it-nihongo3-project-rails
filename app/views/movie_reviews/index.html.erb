@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Movie Reviews</h1>
+<h1>映画のレビュー</h1>
 
 <table>
   <thead>
@@ -18,9 +18,9 @@
         <td><%= movie_review.user_id %></td>
         <td><%= movie_review.movie_id %></td>
         <td><%= movie_review.review %></td>
-        <td><%= link_to 'Show', movie_review %></td>
-        <td><%= link_to 'Edit', edit_movie_review_path(movie_review) %></td>
-        <td><%= link_to 'Destroy', movie_review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '見せる', movie_review, method: :get, class:"btn btn-success"  %></td>
+        <td><%= link_to '修正', edit_movie_review_path(movie_review), method: :get, class:"btn btn-warning" %></td>
+        <td><%= link_to '削除', movie_review, method: :delete, data: { confirm: 'Are you sure?', class: "btn btn-info" } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Movie Review', new_movie_review_path %>
+<%= link_to '新しい映画のレビューの追', new_movie_review_path %>

@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Directors</h1>
+<h1>ディレクター</h1>
 
 <table class="table table-striped table-hover">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Career</th>
-      <th>Awards</th>
+      <th>名前</th>
+      <th>キャリア</th>
+      <th>受賞</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,9 +18,9 @@
         <td><%= director.name %></td>
         <td><%= director.career %></td>
         <td><%= director.awards %></td>
-        <td><%= link_to 'Show', method: :get, director %></td>
-        <td><%= link_to 'Edit', method: :get, edit_director_path(director) %></td>
-        <td><%= link_to 'Destroy', director, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '見せる', director, class:"btn btn-success", method: :get %></td>
+        <td><%= link_to '修正',  edit_director_path(director), class:"btn btn-warning", method: :get %></td>
+        <td><%= link_to '削除', director, method: :delete, class: "btn btn-info", data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Director', method: :get, new_director_path %>
+<%= link_to '新しいディレクターの追加',  new_director_path, method: :get, class:"btn btn-primary" %>
