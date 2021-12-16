@@ -36,16 +36,18 @@
   <% end %>
 </p>
 
-<p>Review From</p>
+<p>Review Form</p>
   <%= form_with(model: @movie_review, local: true) do |form| %>
     <div class= "field">
       <%= form.text_area :review %>
       <%= form.hidden_field :movie_id, :value => @movie.id %>
     </div>
+    <br>
     <div class="actions">
-      <%= form.submit %>
+      <%= form.submit class:"btn btn-primary" %>
     </div>
   <% end %>
+  <br>
   
   <p>Review List</p>
    <ul>
