@@ -7,11 +7,13 @@ class MovieReviewsController < ApplicationController
   end
 
   # GET /movie_reviews/1 or /movie_reviews/1.json
-  def showu
+  def show
+      @user = current_user
   end
 
   # GET /movie_reviews/new
   def new
+    @user = current_user
     @movie_review = MovieReview.new
   end
 
@@ -22,6 +24,7 @@ class MovieReviewsController < ApplicationController
   # POST /movie_reviews or /movie_reviews.json
   def create
     @movie_review = MovieReview.new(movie_review_params)
+    @movie_review.user_id = current_user.id
     # @book_review.user_id = current_user.id
     # @book_review.user_id = 1
     
