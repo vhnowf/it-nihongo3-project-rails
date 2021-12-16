@@ -53,7 +53,7 @@
    <ul>
      <% @movie.movie_review.each do |movie_review|%>
        <li><%= movie_review.review %>
-       (<i><%= movie_review.user.name if movie_review.user%></i>)</li>
+     (<i><%= movie_review.user.name if movie_review.user%></i>)</li>
      <% end %>
    </ul>
 
