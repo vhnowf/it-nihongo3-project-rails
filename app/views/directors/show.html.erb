@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @director.name %>
+</p>
+
+<p>
+  <strong>Career:</strong>
+  <%= @director.career %>
+</p>
+
+<p>
+  <strong>Awards:</strong>
+  <%= @director.awards %>
+</p>
+
+<p>
+  <% if @director.image.attached? %>
+    <%= image_tag @director.image %>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_director_path(@director) %> |
+<%= link_to 'Back', directors_path %>
